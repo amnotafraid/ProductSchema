@@ -40,7 +40,7 @@ First, clone the repository. In the directory where you want the root, do a git 
 ```
 git clone https://github.com/amnotafraid/Angular2ClientServer.git
 ```
-In the Angular2ClientServer/Angular2ClientServer directory, install the software needed like this:
+In the Angular2ClientServer/client directory, install the software needed like this:
 ```
 npm install
 ```
@@ -54,11 +54,11 @@ npm install
 ```
 <a id="run"></a>
 ##Run the code [top](#top)
-Start the software in the client directory, Angular2ClientServer/client:
+You can start the software in the client directory, Angular2ClientServer/client:
 ```
 ng serve
 ```
-You can see the app at localhost:4200, but don't need to. The `ng serve` command will automatically compile changes for you, but the front end will be served by the server side.
+The `ng serve` command will automatically compile changes for you, but the front end will be served by the server side.  So, if you do run `ng serve`, you can see the client side in http://localhost:4200, but you don't need to because it will be served by the server side.
  
 Start the software in the server directory, Angular2ClientServer/server:
 ```
