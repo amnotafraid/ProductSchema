@@ -1,0 +1,10 @@
+# don't commit sensitive
+/server/app/config/auth.js
+
+# compiled output
+/server/dist
+
+# dependencies
+/node_modules
+
+npm-debug.log

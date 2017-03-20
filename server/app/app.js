@@ -21,7 +21,7 @@ app.use(cookieParser());
  */
 if (app.get('env') === 'development') {
 	// This will change in production since we'll be using the dist folder
-	app.use(express.static(path.join(__dirname, '../client/dist')));
+	app.use(express.static(path.join(__dirname, '../../client/dist')));
 	// This covers serving up the index page
 //	app.use(express.static(path.join(__dirname, '../client/.tmp')));
 //	app.use(express.static(path.join(__dirname, '../client/app')));

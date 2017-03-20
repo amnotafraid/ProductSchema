@@ -13,12 +13,12 @@
 <a id="intro"></a>
 ##Introduction [top](#top)
 
-This is an Angular2 project that separates the front end, client, from the backend, server.  The backend has express and 'space' for Mongo.  The secret is in server/app.js, and these lines:
+This is an Angular2 project that separates the front end, client, from the backend, server.  The backend has express and 'space' for Mongo.  The secret is in server/app/app.js, and these lines:
 
 ```
 if (app.get('env') === 'development') {
 	// This will change in production since we'll be using the dist folder
-	app.use(express.static(path.join(__dirname, '../client/dist')));
+	app.use(express.static(path.join(__dirname, '../../client/dist')));
 ```
 
 The above will serve the client Angular 2 stuff.
@@ -29,9 +29,9 @@ Some version info:
 
 ```
 node -v
-v6.0.0
-mongo --version
-MongoDB shell version: 3.2.0
+v6.10.0
+npm -v @angular/cli
+3.10.10
 ```
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.24.
@@ -46,7 +46,7 @@ npm install
 ```
 And then build it:
 ```
-ng build
+ng build --watch
 ```
 In the Angular2ClientServer/server directory:
 ```
@@ -54,16 +54,25 @@ npm install
 ```
 <a id="run"></a>
 ##Run the code [top](#top)
-You can start the software in the client directory, Angular2ClientServer/client:
+Rather than using ```ng serve```, which serves the app from memory, this application uses server-lite to serve the app from the disk.  This makes it possible for the server side to 'find' it.  To run the client side, you can do this:
 ```
-ng serve
+npm run dev
 ```
-The `ng serve` command will automatically compile changes for you, but the front end will be served by the server side.  So, if you do run `ng serve`, you can see the client side in http://localhost:4200, but you don't need to because it will be served by the server side.
+This is going to serve the app at http://localhost:4200.  The port is configured in client\bs-config.json.  The ```ng build --watch``` command will 'watch' for code changes and rebuild.
  
-Start the software in the server directory, Angular2ClientServer/server:
+To start the software in the server directory, Angular2ClientServer/server, you need to have nodemon installed.  To check if it is installed, you can try this from the command line:
+```
+npm list -g -depth=0 | grep "nodemon"
+```
+If you see it, all is well.  If you don't, you can install it like this:
+```
+npm install -g nodemon
+```
+Then, from Angular2ClientServer/server directory, you can serve it like this:
 ```
 npm test
 ```
+
 Open up a browser at http://localhost:3000. You should see your app:
 
 <a id="front-page">
