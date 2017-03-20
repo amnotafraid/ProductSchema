@@ -1,5 +1,5 @@
 <a id="top"></a>
-# Angular2ClientServer
+# ProductSchema
 * [Introduction](#intro)
 
 * [Build the Code](#build)
@@ -36,7 +36,7 @@ This project was generated with [angular-cli](https://github.com/angular/angular
 
 First, clone the repository. In the directory where you want the root, do a git clone. It will create a Angular2ClientServer directory and get all the code inside that directory:
 ```
-git clone https://github.com/amnotafraid/Angular2ClientServer.git
+git clone https://github.com/amnotafraid/ProductSchema.git
 ```
 In the Angular2ClientServer/client directory, install the software needed like this:
 ```
