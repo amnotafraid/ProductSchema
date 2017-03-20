@@ -1,5 +1,5 @@
 <a id="top"></a>
-#Angular2ClientServer
+# Angular2ClientServer
 * [Introduction](#intro)
 
 * [Build the Code](#build)
@@ -8,10 +8,8 @@
 
 * [View of Front Page](#front-page)
 
-* [Host the Code](#host)
-
 <a id="intro"></a>
-##Introduction [top](#top)
+## Introduction [top](#top)
 
 This is an Angular2 project that separates the front end, client, from the backend, server.  The backend has express and 'space' for Mongo.  The secret is in server/app/app.js, and these lines:
 
@@ -24,7 +22,7 @@ if (app.get('env') === 'development') {
 The above will serve the client Angular 2 stuff.
 
 <a id="build"></a>
-##Build the Code [top](#top)
+## Build the Code [top](#top)
 Some version info:
 
 ```
@@ -76,9 +74,6 @@ npm test
 Open up a browser at http://localhost:3000. You should see your app:
 
 <a id="front-page">
-##</a> [top](#top)
+## </a> [top](#top)
 ![app works](https://cloud.githubusercontent.com/assets/1727761/23677480/ea81095e-0345-11e7-925d-f4702a600f0d.png)
 <a id="host"></a>
-##Host the code [top](#top)
-I have instruction on how to host this code [here](https://amnotafraid.gitbooks.io/i-mean-it/content/hosting_on_bitnami.html)
-
